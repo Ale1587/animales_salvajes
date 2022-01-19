@@ -21,11 +21,12 @@
         <hr class="my-0 bg-dark w-75 mx-auto" />
 
         <div
-          id="Animales"
+          id="Animales" 
           class="my-3 p-3 d-flex align-items-start justify-content-start flex-wrap bg-dark"
-        ></div>
+        ></div>   <!-- este es el div contedores de los animales registrados por el formulario -->
       </div>
       <div class="card col-12 col-sm-4 bg-warning text-dark offset-1 shadow-lg">
+
         <form action="#" class="card-body">
           <h5 class="card-title">Registrar animal en:</h5>
           <h6 class="card-subtitle mb-2 text-muted">
@@ -35,7 +36,7 @@
           <div class="card-text my-3">
             <div class="form-group">
               <label for="exampleInputPassword1">Nombre del animal:</label>
-              <select class="form-control bg-dark text-white" id="animal">  //aqui se selecciona el animal
+              <select class="form-control bg-dark text-white" id="animal" name="nombre">  <!-- aqui se selecciona el animal -->
                 <option disabled selected>Seleccione un animal</option>
                 <option value="Leon">León</option>
                 <option value="Lobo">Lobo</option>
@@ -47,7 +48,7 @@
 
             <div class="form-group">
               <label for="exampleInputPassword1">Años de edad estimados:</label>
-              <select class="form-control bg-dark text-white" id="edad">
+              <select class="form-control bg-dark text-white" id="edad" name="edad">  <!-- esta es la selección de la edad -->
                 <option disabled selected>Seleccione un rango de años</option>
 
                 <option value="0 - 1 años">0 - 1 años</option>
@@ -64,23 +65,23 @@
               <textarea
                 rows="5"
                 class="form-control shadow-lg bg-dark text-white"
-                id="comentarios"
-              ></textarea>
+                id="comentarios" name="comentario"
+              ></textarea>  <!-- aqui van los comentarios -->
             </div>
 
             <div class="p-5 card bg-dark">
-              <div id="preview"></div>
+              <div id="preview" name="preview"></div>   <!-- aqui va la imagen -->
             </div>
           </div>
 
-          <btn class="btn btn-light d-block" id="btnRegistrar">Agregar</btn>
+          <button type="submit" class="btn btn-light d-block" id="btnRegistrar">Agregar</button>   <!-- este es el boton -->
         </form>
       </div>
     </div>
 
     <audio id="player" class="d-none"></audio>
 
-    <div class="modal fade" id="exampleModal">
+    <div class="modal fade" id="exampleModal"> <!-- este es el modal -->
       <div class="modal-dialog modal-dialog-centered w-25" role="document">
         <div class="modal-content bg-dark">
           <div class="modal-body">...</div>
@@ -103,7 +104,9 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="assets/js/index.js"></script>
+    <script type="module" src="assets/js/index.js"></script>            
+             
+              
     
     
   </body>

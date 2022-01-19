@@ -4,8 +4,8 @@ const animales = (function() {
     const urlBase = '../../animales.json'
 
     const getData = async () => {
-        const response = await fetch(urlBase);
-        return response.json()
+        const respuesta = await fetch(urlBase);
+        return respuesta.json()
     }
     
     return { getData }

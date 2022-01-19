@@ -1,12 +1,12 @@
-// crear la clase animal
+// crear la superClase animal
+// exportar la superClase
 
-class animal {
+class Animal {
     #nombre
     #edad
     #img
     #comentarios
     #sonido
-
 
     constructor(nombre, edad, img, comentarios, sonido){
         this.#nombre = nombre
@@ -29,10 +29,23 @@ class animal {
     }
 
     get sonido (){
-        return this.#sonido
+        return `<audio controls><source src="./assets/sounds/${this.#sonido}" type="audio/mp3" /></audio>`
     }
 
-    setComentarios () {
-        return ''
+    get comentarios (){
+        this.#comentarios
+    }
+
+    set comentarios (new_comentario) {
+        this.#comentarios = new_comentario
     }
 }
+
+
+    export default Animal
+
+
+ // const lobo = new animal ('Lobezno', 'entre 1 y 3 años', 'Logo.jpg', 'comentarios', 'Aullido.mp3')
+
+ // console.log(lobo);
+
